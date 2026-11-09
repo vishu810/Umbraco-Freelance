@@ -1,0 +1,20 @@
+﻿
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<Umbraco.Cms.Core.Models.Blocks.BlockGridItem<ContentModels.NavigationGroup>>
+
+
+
+@if ((Model.Content.ChildLinks != null && Model.Content.ChildLinks.Any())
+&& ( Model.Content.Link != null))
+{
+    <li class="nav-item mx-0 mx-lg-1 dropdown">
+        @if(Model.Content.Link != null)
+        {
+            <a class="nav-link py-3 px-0 dropdown-toggle" target="@Model.Content.Link.Target" href="@Model.Content.Link.Url" id="@Model.Content.Link.Name"></a>
+        }
+    </li>
+
+}
+else
+{
+    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" target="@Model.Content.Link.Target" href="@Model.Content.Link.Url">@Model.Content.Link.Name</a></li>
+}

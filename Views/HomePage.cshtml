@@ -1,0 +1,14 @@
+﻿@*@using Umbraco.Cms.Web.Common.PublishedModels;*@
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<ContentModels.HomePage>
+@{
+	Layout = "Main.cshtml";
+
+}
+
+
+<!-- Portfolio Section-->
+@await Html.PartialAsync("portfolio")
+@await Html.PartialAsync("about")
+<!-- Contact Section-->
+@await Html.PartialAsync("contact")
+
